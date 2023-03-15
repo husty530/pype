@@ -11,7 +11,7 @@ using var frame = new Mat(h, w, MatType.CV_8UC3);
 using var cap = new VideoCapture() { FrameWidth = w, FrameHeight = h, Fps = 30 };
 cap.Open(0);
 
-var exeFile = "C:/Users/husty/AppData/Local/Programs/Python/Python310/python.exe";
+var exeFile = "/* absolute path */python.exe";
 var entryFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../py/main.py");
 using var pipe = new PipeServer(exeFile, entryFile, w, h);
 try
